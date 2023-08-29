@@ -13,7 +13,6 @@ import (
 )
 
 func hello(w http.ResponseWriter, req *http.Request) {
-    logger.Info("hello received")
     fmt.Fprintf(w, "hello\n")
 }
 
