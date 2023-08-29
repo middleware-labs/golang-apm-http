@@ -17,13 +17,13 @@ func hello(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
-	 go track.Track(
+     go track.Track(
         track.WithConfigTag("service", "your service name"),
         track.WithConfigTag("projectName", "your project name"),
         track.WithConfigTag("accessToken", "your access token"),
-    )
+     )
      http.Handle("/hello", mwhttp.MiddlewareHandler(http.HandlerFunc(hello), "hello"))
      http.ListenAndServe(":8090", nil)	
 }
 
-~~~~
+
